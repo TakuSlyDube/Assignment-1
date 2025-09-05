@@ -1,0 +1,112 @@
+Assignment-1: Fixture Management API
+
+This project is a Node.js RESTful API for managing sports fixtures, built with Express and Sequelize (PostgreSQL).
+
+Features
+
+- Create, read, and delete fixtures
+- Unique fixture codes
+- Fixture status tracking (scheduled, ongoing, finished, cancelled)
+- Uses Sequelize ORM and migrations
+
+Project Structure
+
+```
+.
+├── app.js
+├── package.json
+├── .env
+├── .gitignore
+├── config/
+│   ├── config.js
+│   └── database.js
+├── controller/
+│   └── fixtureController.js
+├── middleware/
+├── migrations/
+│   └── 20250905081356-create-fixture.js
+├── models/
+│   ├── fixture.js
+│   └── index.js
+├── routes/
+│   └── fixtureRouter.js
+├── seeders/
+└── Readme
+```
+ Environment Variables
+
+Create a `.env` file in the root directory with the following content:
+
+```
+PORT=3000
+ENV=development
+
+DB_USERNAME=postgres
+DB_PASSWORD=taku
+DB_DATABASE=assignment_db
+DB_HOST=localhost
+DB_PORT=5432
+DB_DIALECT=postgres
+```
+
+
+
+1. Clone the repository
+
+   
+   git clone https://github.com/TakuSlyDube/Assignment-1.git
+   cd Assignment-1
+   
+
+2. Install dependencies
+
+   
+   npm install
+   
+
+3. Configure your `.env` file (above)
+
+4. Run migrations
+
+   ```sh
+   npx sequelize-cli db:migrate
+   ```
+
+5. Start the server
+
+
+   npm run start
+
+
+   The API will run on `http://localhost:3000` by default.
+
+
+All endpoints are prefixed with `/api`.
+
+- `POST   /api/fixtures`  
+  Create a new fixture
+
+- `GET    /api/fixtures`  
+  Get all fixtures
+
+- `GET    /api/fixtures/:fixture_code`  
+  Get a fixture by its unique code
+
+- `DELETE /api/fixtures/:fixture_code`  
+  Delete a fixture by its unique code
+
+
+
+json body
+{
+  "fixture_code": "ABC123",
+  "home_team": "Team A",
+  "away_team": "Team B",
+  "fixture_date": "2024-06-10",
+  "fixture_time": "15:00:00",
+  "venue": "Stadium Name",
+  "league": "Premier League",
+  "status": "scheduled"
+}
+
+
