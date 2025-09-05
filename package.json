@@ -1,0 +1,24 @@
+{
+  "name": "assignment-1",
+  "version": "1.0.0",
+  "description": "Assessment",
+  "homepage": "https://github.com/TakuSlyDube/Assignment-1#readme",
+  "bugs": {
+    "url": "https://github.com/TakuSlyDube/Assignment-1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TakuSlyDube/Assignment-1.git"
+  },
+  "license": "ISC",
+  "author": "Takunda S Dube",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0"
+  }
+}
