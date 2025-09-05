@@ -48,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
       comment: 'Status of the fixture',
     }
   }, {
-    tableName: 'fixtures',
+    tableName: 'Fixtures',
     timestamps: true,
   });
 
